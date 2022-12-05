@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://LonData.Monitor" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" targetNamespace="http://LonData.Monitor" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LonData.Monitor/Imports">
+      <xsd:import namespace="http://LonData.Monitor" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILonData_GetReady_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReady" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetReady_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValue" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValueCP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCP" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValueCP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValueCPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCPI" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetValueCPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueCPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValue" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValueCP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueCP" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValueCP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValueCPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueCPI" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_SetValueCPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueCPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetAlarmValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarmValues" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetAlarmValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarmValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetAlarm2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarm2" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetAlarm2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlarm2Response" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetPointsInManual_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsInManual" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetPointsInManual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsInManualResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetPointsInManualLastCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsInManualLastCheck" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetPointsInManualLastCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsInManualLastCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_ClearAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearAlarm" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_ClearAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetCP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCP" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetCP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_StartPause_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartPause" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_StartPause_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartPauseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_StopPause_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopPause" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_StopPause_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopPauseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="ILonData_GetVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILonData">
+    <wsdl:operation name="GetReady">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetReady" message="tns:ILonData_GetReady_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetReadyResponse" message="tns:ILonData_GetReady_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValue">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetValue" message="tns:ILonData_GetValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetValueResponse" message="tns:ILonData_GetValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueCP">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetValueCP" message="tns:ILonData_GetValueCP_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetValueCPResponse" message="tns:ILonData_GetValueCP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueCPI">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetValueCPI" message="tns:ILonData_GetValueCPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetValueCPIResponse" message="tns:ILonData_GetValueCPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValue">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/SetValue" message="tns:ILonData_SetValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/SetValueResponse" message="tns:ILonData_SetValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValueCP">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/SetValueCP" message="tns:ILonData_SetValueCP_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/SetValueCPResponse" message="tns:ILonData_SetValueCP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValueCPI">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/SetValueCPI" message="tns:ILonData_SetValueCPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/SetValueCPIResponse" message="tns:ILonData_SetValueCPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmValues">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetAlarmValues" message="tns:ILonData_GetAlarmValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetAlarmValuesResponse" message="tns:ILonData_GetAlarmValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm2">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetAlarm2" message="tns:ILonData_GetAlarm2_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetAlarm2Response" message="tns:ILonData_GetAlarm2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsInManual">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetPointsInManual" message="tns:ILonData_GetPointsInManual_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetPointsInManualResponse" message="tns:ILonData_GetPointsInManual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsInManualLastCheck">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetPointsInManualLastCheck" message="tns:ILonData_GetPointsInManualLastCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetPointsInManualLastCheckResponse" message="tns:ILonData_GetPointsInManualLastCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearAlarm">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/ClearAlarm" message="tns:ILonData_ClearAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/ClearAlarmResponse" message="tns:ILonData_ClearAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCP">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetCP" message="tns:ILonData_GetCP_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetCPResponse" message="tns:ILonData_GetCP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPause">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/StartPause" message="tns:ILonData_StartPause_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/StartPauseResponse" message="tns:ILonData_StartPause_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopPause">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/StopPause" message="tns:ILonData_StopPause_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/StopPauseResponse" message="tns:ILonData_StopPause_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input wsaw:Action="http://LonData.Monitor/ILonData/GetVersion" message="tns:ILonData_GetVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://LonData.Monitor/ILonData/GetVersionResponse" message="tns:ILonData_GetVersion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
