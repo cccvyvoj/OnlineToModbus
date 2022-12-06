@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 
 namespace OnlineToModbusLibrary
 {
@@ -10,7 +8,16 @@ namespace OnlineToModbusLibrary
     {
         public Kernel()
         {
-            ModbusTCPServer server = new ModbusTCPServer();
+            Config conf = new Config();
+            try
+            {
+                conf = JsonSerializer.Deserialize<Config>(File.ReadAllText($"{AppContext.BaseDirectory}Config.json"));
+            }
+            catch (Exception ex)
+            {
+                //Log.Error($"Chyba čtení parametrů měřičů.{Environment.NewLine}{ex.Message}");
+            }
+            ModbusTCPServer server = new ModbusTCPServer(conf);
         }
     }
 }
